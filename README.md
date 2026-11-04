@@ -83,22 +83,6 @@ YOLOv3, YOLOv3FP16, YOLOv3Int8LUT, YOLOv8s, YOLOv8n, YOLOv3Tiny, YOLOv3TinyInt8L
 
 Model loading is **optional and gracefully degrades** — if no model is bundled, detection stays a no-op and the rest of the app runs normally. To enable detection, add one of the above `.mlmodel` (or precompiled `.mlmodelc`) files to the Runner target in Xcode so the on-disk file and the project reference stay in sync. Models are **not** checked into this repo.
 
-## Configuration
-
-AI wireframe generation uses the Claude API via `lib/ai_wireframe_service.dart`.
-
-> ⚠️ **Security:** the repository currently contains a hardcoded Anthropic API key in `ai_wireframe_service.dart`. **Rotate/revoke that key** and do not commit real keys. Load it from an environment variable or a build-time define instead, e.g.:
->
-> ```dart
-> static String apiKey =
->     const String.fromEnvironment('ANTHROPIC_API_KEY', defaultValue: '');
-> ```
->
-> ```bash
-> flutter run --dart-define=ANTHROPIC_API_KEY=sk-ant-...
-> ```
-
-If no key is set, AI wireframe generation is skipped; object detection and the proportional-wireframe fallback still work.
 
 ## Tech notes
 

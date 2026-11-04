@@ -12,7 +12,7 @@ import 'wireframe_model.dart';
 
 class AIWireframeService {
   // Set your API key here or pass it in
-  static String apiKey = "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";
+  static String apiKey = "{APIKEY}";
 
   static Future<WireframeModel?> generate({
     required String label,
