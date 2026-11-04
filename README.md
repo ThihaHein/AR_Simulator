@@ -85,7 +85,7 @@ Model loading is **optional and gracefully degrades** — if no model is bundled
 
 
 ## Tech notes
-
+- There's a project demo screenshots in /screenshots folder
 - Rendering is done with Flutter `CustomPainter` / `Ticker`-driven animation — no external 3D engine.
 - Simulation state flows through a lightweight BLoC-style provider (`simulation_bloc.dart`).
 - Dependencies: `camera`, `http`, `cupertino_icons`.
